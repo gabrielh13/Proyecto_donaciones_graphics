@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<style type="text/css">
+			body {
+				background-color: #E1FAF4 }
+				#result {
+                color: gray;
+                min-height: 2em;
+            }
+         </style>
 		<title>Template Base</title>
 	</head>
 	<body>
-		{% extends 'base.html' %}
+		{% extends 'basee.html' %}
 		{% block content %}
-		<h1>Hola Mundo desde DJangoo</h1>
-		<h2>Con Template</h2>
-		{{ request.user }}
-		<br>
-		{{ request.user.is_authenticated }}
-		<p>
-		   {{myText|upper|truncatechars:"16"}},
-		   {{myNumber}}
-		</p>
-		<ul>
-		   {% for myItem in myList %}
-		   <li>{{forloop.counter}} - {{ myItem|add:2 }}
-	               {% if myItem == 33 %}
-		          - Este numero es magico
-		       {% elif myItem|divisibleby:2 %}
-			  - Este numero es par
-		       {% elif myItem > 50 %}
-		          - Este numero es mayor que 50
-		       {% endif %}
-		   </li>
-		   {% endfor %}
-		</ul>
+		
+
+	<ul>
+      <li>Vistas disponibles
+        <ul>
+          <li><a href="pastel" >Pastel</a></li>
+          <li><a href="table" >Tabla</a></li>
+          <li><a href="region" >Region</a></li>
+        </ul>
+      </li>
+    </ul>
+
 		{% endblock %}
 	</body>
 </html>
